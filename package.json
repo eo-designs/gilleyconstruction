@@ -1,0 +1,34 @@
+{
+  "name": "gilleyconstruction",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:clean": "rm -rf .next && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "r2:upload": "node --env-file=.env.local scripts/upload-media-to-r2.mjs",
+    "r2:upload:dry": "node --env-file=.env.local scripts/upload-media-to-r2.mjs --dry",
+    "r2:upload:force": "node --env-file=.env.local scripts/upload-media-to-r2.mjs --force"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1045.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.38.0",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
