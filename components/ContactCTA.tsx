@@ -1,7 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal, StaggerGroup, StaggerItem } from "./Reveal";
+import { localMedia } from "@/lib/media";
+
+const LOGO_ROUND = localMedia("logo_round.PNG");
 
 const HIGHLIGHTS = [
   {
@@ -32,6 +36,18 @@ export default function ContactCTA() {
       <div className="container relative">
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-start">
           <Reveal direction="right">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <Image
+                src={LOGO_ROUND}
+                alt="Gilley round logo"
+                width={70}
+                height={70}
+                className="w-12 h-12 md:w-14 md:h-14 object-contain"
+              />
+              <span className="text-bone/60 uppercase tracking-[0.28em] text-[10px] font-bold">
+                Gilley Construction & Restoration Inc.
+              </span>
+            </div>
             <span className="eyebrow">Who We Build For</span>
             <h2 className="mt-5">
               Your Project.

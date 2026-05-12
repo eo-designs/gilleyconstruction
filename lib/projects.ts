@@ -99,4 +99,29 @@ export const PROJECTS: Project[] = [
       live("live-8.jpg"),
     ],
   },
+  {
+    id: "kitchen-restoration",
+    title: "Kitchen Restoration",
+    category: "Restoration",
+    blurb:
+      "Kitchen remodel and restoration scope with upgraded finishes, layout improvements, and detail-focused execution.",
+    cover: local("kitchen_1.jpeg"),
+    images: [
+      local("kitchen_1.jpeg"),
+      local("kitchen_2.jpeg"),
+      local("kitchen_3.JPG"),
+      local("kitchen_4.jpeg"),
+      local("kitchen_5.jpeg"),
+      local("kitchen_6.jpeg"),
+    ],
+  },
+  {
+    id: "tub-restoration",
+    title: "Tub Restoration",
+    category: "Restoration",
+    blurb:
+      "Bathroom tub restoration and finish work focused on clean lines, durability, and refreshed visual appeal.",
+    cover: local("tub_1.jpeg"),
+    images: [local("tub_1.jpeg"), local("tub_2.jpeg")],
+  },
 ];

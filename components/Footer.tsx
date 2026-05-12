@@ -1,4 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
+import { localMedia } from "@/lib/media";
+
+const LOGO_WHITE = localMedia("logo_white.PNG");
 
 export default function Footer() {
   return (
@@ -8,15 +12,21 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <span className="inline-flex items-center justify-center w-10 h-10 bg-ember text-ink font-black text-xl rounded-tight">
-                G
+              <span className="inline-flex items-center justify-center w-12 h-12 rounded-tight bg-white/5 border border-white/10">
+                <Image
+                  src={LOGO_WHITE}
+                  alt="Gilley logo"
+                  width={80}
+                  height={80}
+                  className="w-9 h-9 object-contain"
+                />
               </span>
               <div className="leading-none">
-                <div className="text-bone font-bold uppercase tracking-wider">
-                  Gilley
+                <div className="text-bone font-bold uppercase tracking-[0.12em] text-sm">
+                  Gilley Construction
                 </div>
-                <div className="text-ember text-[10px] font-bold tracking-[0.3em] uppercase">
-                  Construction
+                <div className="text-ember text-[10px] font-bold tracking-[0.18em] uppercase mt-1">
+                  & Restoration Inc.
                 </div>
               </div>
             </div>

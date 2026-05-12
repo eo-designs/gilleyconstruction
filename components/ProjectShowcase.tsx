@@ -16,7 +16,7 @@ export default function ProjectShowcase({ limit }: { limit?: number }) {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
           <Reveal direction="up">
             <div>
-              <span className="eyebrow">Recent Work</span>
+              <span className="eyebrow">Recent Gallery</span>
               <h2 className="mt-5">
                 Showcase. <span className="text-ember">Not Just Talk.</span>
               </h2>

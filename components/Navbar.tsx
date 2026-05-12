@@ -1,15 +1,19 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { localMedia } from "@/lib/media";
 
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/gallery", label: "Work" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
+
+const LOGO_WHITE = localMedia("logo_white.PNG");
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -33,18 +37,25 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link href="/" className="group flex items-center gap-3">
-          <span className="relative inline-flex items-center justify-center w-9 h-9 bg-ember text-ink font-black text-lg rounded-tight overflow-hidden">
-            G
-            <span className="absolute inset-0 bg-white/40 animate-sweep opacity-0 group-hover:opacity-100" />
+      <div className="container flex items-center justify-between h-24 md:h-28">
+        <Link href="/" className="group flex items-center gap-4 md:gap-5">
+          <span className="relative inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-tight overflow-hidden bg-white/5 border border-white/10">
+            <Image
+              src={LOGO_WHITE}
+              alt="Gilley Construction and Restoration logo"
+              width={120}
+              height={120}
+              className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              priority
+            />
+            <span className="absolute inset-0 bg-white/20 animate-sweep opacity-0 group-hover:opacity-100" />
           </span>
-          <span className="flex flex-col leading-none">
-            <span className="text-bone font-bold text-base tracking-wider uppercase">
-              Gilley
+          <span className="flex flex-col leading-[0.95]">
+            <span className="text-bone font-bold text-[1.2rem] md:text-[1.6rem] tracking-[0.05em] uppercase">
+              Gilley Construction
             </span>
-            <span className="text-ember text-[10px] font-bold tracking-[0.3em] uppercase">
-              Construction
+            <span className="text-ember text-[0.65rem] md:text-[0.85rem] font-bold tracking-[0.2em] uppercase mt-1.5">
+              & Restoration Inc.
             </span>
           </span>
         </Link>

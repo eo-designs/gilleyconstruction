@@ -19,7 +19,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Gilley Construction | Licensed Design-Build & Restoration · Northern California",
+  title:
+    "Gilley Construction & Restoration Inc. | Licensed Design-Build · Northern California",
   description:
     "Licensed CSLB #1111756 general contractor delivering design-build, concrete, hardscape, restoration, and commercial work across Northern California.",
 };

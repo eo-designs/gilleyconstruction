@@ -120,7 +120,7 @@ export default function HeroVideo() {
               <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
             </a>
             <Link href="/gallery" className="btn-secondary">
-              See Our Work
+              See Our Gallery
             </Link>
           </motion.div>
 

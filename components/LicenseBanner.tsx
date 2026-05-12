@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import { localMedia } from "@/lib/media";
+
 const ITEMS = [
   "Licensed CSLB #1111756",
   "Bonded & Insured",
@@ -11,6 +14,8 @@ const ITEMS = [
   "Premium Craftsmanship",
 ];
 
+const LOGO_BLACK = localMedia("logo_black.PNG");
+
 export default function LicenseBanner() {
   return (
     <div className="relative bg-ember text-ink overflow-hidden border-y border-ink/30">
@@ -21,6 +26,15 @@ export default function LicenseBanner() {
               key={i}
               className="inline-flex items-center gap-3 text-xs font-black uppercase tracking-[0.3em]"
             >
+              {i % 4 === 0 && (
+                <Image
+                  src={LOGO_BLACK}
+                  alt="Gilley logo"
+                  width={22}
+                  height={22}
+                  className="w-4.5 h-4.5 object-contain"
+                />
+              )}
               <span className="w-1.5 h-1.5 bg-ink rotate-45" />
               {item}
             </span>
